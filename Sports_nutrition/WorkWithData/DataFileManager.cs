@@ -135,6 +135,11 @@ namespace Medication
             SortProducts(p => p.Name);
         }
 
+        public void SortProductsByCategory()
+        {
+            SortProducts(p => p.Category);
+        }
+
         public void SortProductsById()
         {
             SortProducts(p => p.ID);
@@ -169,6 +174,7 @@ namespace Medication
                 Console.WriteLine($"Ошибка при сортировке продуктов: {ex.Message}");
             }
         }
+
         public List<Product> SearchProductsByName(string searchTerm)
         {
             try

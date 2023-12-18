@@ -87,6 +87,7 @@ namespace Medication
             this.sortComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sortComboBox.FormattingEnabled = true;
             this.sortComboBox.Items.AddRange(new object[] {
+            "По категории" ,
             "По имени",
             "По цене"});
             this.sortComboBox.Location = new System.Drawing.Point(647, 12);
@@ -107,23 +108,17 @@ namespace Medication
             this.searchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             this.searchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
             this.searchTextBox.Leave += new System.EventHandler(this.SearchTextBox_Leave);
-            // 
-            // IdHeader
-            // 
+         
             this.IdHeader.Width = 0;
-            // 
-            // CategoryHeader
-            // 
-            this.CategoryHeader.Text = "Категория";
-            this.CategoryHeader.Width = 170;
-            // 
-            // NameHeader
-            // 
+        
             this.NameHeader.Text = "Наименование";
-            this.NameHeader.Width = 168;
-            // 
-            // CostHeader
-            // 
+            this.NameHeader.Width = 170;
+
+            // NameHeader
+            this.CategoryHeader.Text = "Категория";
+            this.CategoryHeader.Width = 168;
+
+
             this.CostHeader.Text = "Стоимость";
             this.CostHeader.Width = 171;
             // 

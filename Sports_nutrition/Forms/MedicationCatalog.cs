@@ -28,15 +28,15 @@ namespace Medication
             List<Product> products = dataManager.ReadProductsFromFile();
             foreach (var product in products)
             {
-                ListViewItem item = new ListViewItem(); // Убрана строка, добавляющая ID в ListViewItem
+                ListViewItem item = new ListViewItem(product.ID.ToString()); // Добавляем ID в ListViewItem
                 item.SubItems.Add(product.Category);
                 item.SubItems.Add(product.Name);
                 item.SubItems.Add(product.Price.ToString());
 
                 listView1.Items.Add(item);
             }
-
         }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count > 0)
@@ -152,6 +152,10 @@ namespace Medication
                     dataManager.SortProductsByName();
                     break;
 
+                case "По категории": // Изменено на "По категории"
+                    dataManager.SortProductsByCategory();
+                    break;
+
                 case "По цене":
                     dataManager.SortProductsByPrice();
                     break;
@@ -163,6 +167,7 @@ namespace Medication
 
             FillProductListView();
         }
+
         private void SearchTextBox_Enter(object sender, EventArgs e)
         {
             if (searchTextBox.Text == "Введите текст для поиска")

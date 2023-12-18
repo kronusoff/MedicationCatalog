@@ -57,22 +57,22 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 95);
+            this.label2.Location = new System.Drawing.Point(4, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 22);
+            this.label2.Size = new System.Drawing.Size(116, 29);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Название";
+            this.label2.Text = "Название:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(4, 154);
+            this.label3.Location = new System.Drawing.Point(4, 157);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 22);
+            this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Категория:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -85,7 +85,7 @@
             this.label4.Location = new System.Drawing.Point(4, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 22);
+            this.label4.Size = new System.Drawing.Size(116, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Стоимость:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,7 +93,7 @@
             // NameTextBox
             // 
             this.NameTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTextBox.Location = new System.Drawing.Point(131, 93);
+            this.NameTextBox.Location = new System.Drawing.Point(131, 91);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(174, 29);
@@ -121,7 +121,7 @@
             "Минералы",
             "Снотворные",
             "Слабительные"});
-            this.CategoryComboBox.Location = new System.Drawing.Point(131, 154);
+            this.CategoryComboBox.Location = new System.Drawing.Point(131, 157);
             this.CategoryComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(174, 28);

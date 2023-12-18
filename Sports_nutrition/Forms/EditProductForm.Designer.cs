@@ -109,10 +109,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(8, 121);
+            this.label4.Location = new System.Drawing.Point(8, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 22);
+            this.label4.Size = new System.Drawing.Size(117, 29);
             this.label4.TabIndex = 21;
             this.label4.Text = "Стоимость:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +122,10 @@
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(9, 157);
+            this.label3.Location = new System.Drawing.Point(9, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 22);
+            this.label3.Size = new System.Drawing.Size(116, 26);
             this.label3.TabIndex = 20;
             this.label3.Text = "Категория:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,10 +134,10 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(8, 87);
+            this.label2.Location = new System.Drawing.Point(8, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 22);
+            this.label2.Size = new System.Drawing.Size(117, 29);
             this.label2.TabIndex = 19;
             this.label2.Text = "Название:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
