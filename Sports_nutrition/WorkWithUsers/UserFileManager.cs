@@ -34,28 +34,24 @@ namespace Medication
 
         public bool AddUser(string username, string password, string verifiedPassword)
         {
-            // Пароль должен быть от 4 до 14 символов
             if (password.Length < 4 || password.Length > 16)
             {
-                MessageBox.Show("Пароль должен быть от 4 до 14 символов.");
+                MessageBox.Show("Пароль должен быть от 4 до 16 символов.");
                 return false;
             }
 
-            // Имя пользователя должно быть от 1 до 14 символов
             if (username.Length < 4 || username.Length > 16)
             {
-                MessageBox.Show("Имя пользователя должно быть от 4 до 14 символов.");
+                MessageBox.Show("Имя пользователя должно быть от 4 до 16 символов.");
                 return false;
             }
 
-            // Пароли должны совпадать
             if (password != verifiedPassword)
             {
                 MessageBox.Show("Пароли не совпадают.");
                 return false;
             }
 
-            // Проверка, что данный пользователь не зарегистрирован
             List<UserData> existingUsers = ReadUserData();
             if (existingUsers.Exists(u => u.Username == username))
             {
@@ -63,7 +59,6 @@ namespace Medication
                 return false;
             }
 
-            // Добавление пользователя в файл
             try
             {
                 existingUsers.Add(new UserData { Username = username, Password = password });

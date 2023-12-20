@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Medication.Forms; // Используйте правильное пространство имен, если оно отличается
+using Medication.Forms; 
 
 
 namespace Medication
@@ -36,20 +36,6 @@ namespace Medication
                 listView1.Items.Add(item);
             }
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                ListViewItem selectedItem = listView1.SelectedItems[0];
-
-                string category = selectedItem.SubItems[1].Text;
-                string name = selectedItem.SubItems[2].Text;
-                string price = selectedItem.SubItems[3].Text;
-            }
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             AddProductForm addProductForm = new AddProductForm();
@@ -64,10 +50,8 @@ namespace Medication
                 // Получаем выбранный элемент списка
                 ListViewItem selectedItem = listView1.SelectedItems[0];
 
-                // Предупреждение перед удалением продукта
                 DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить выбранный продукт?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                // Если пользователь выбрал "Да", удаляем продукт и обновляем список
                 if (result == DialogResult.Yes)
                 {
                     if (int.TryParse(selectedItem.SubItems[0].Text, out int selectedProductId))
@@ -101,16 +85,12 @@ namespace Medication
                 string selectedName = selectedItem.SubItems[2].Text;
                 int selectedPrice = int.Parse(selectedItem.SubItems[3].Text);
 
-                // Предупреждение перед открытием формы редактирования
                 DialogResult result = MessageBox.Show("Вы уверены, что хотите редактировать выбранный продукт?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                // Если пользователь выбрал "Да", открываем форму редактирования
                 if (result == DialogResult.Yes)
                 {
-                    // Создаем объект Product на основе выбранных данных
                     Product selectedProduct = new Product(selectedProductId, selectedCategory, selectedName, selectedPrice);
 
-                    // Создаем форму редактирования и передаем выбранный продукт в конструктор
                     EditProductForm editProductForm = new EditProductForm(selectedProduct);
                     editProductForm.FormClosed += (s, args) => FillProductListView();
                     editProductForm.Show();
@@ -152,7 +132,7 @@ namespace Medication
                     dataManager.SortProductsByName();
                     break;
 
-                case "По категории": // Изменено на "По категории"
+                case "По категории": 
                     dataManager.SortProductsByCategory();
                     break;
 
@@ -161,7 +141,6 @@ namespace Medication
                     break;
 
                 default:
-                    // Добавьте обработку для других опций сортировки, если необходимо
                     break;
             }
 
@@ -181,7 +160,7 @@ namespace Medication
             if (string.IsNullOrWhiteSpace(searchTextBox.Text))
             {
                 searchTextBox.Text = "Введите текст для поиска";
-                searchTextBox.ForeColor = SystemColors.GrayText; // Устанавливаем серый цвет текста
+                searchTextBox.ForeColor = SystemColors.GrayText; 
             }
         }
 
@@ -191,15 +170,12 @@ namespace Medication
 
             if (searchText.Equals("Введите текст для поиска", StringComparison.OrdinalIgnoreCase))
             {
-                // Если текст в поле поиска равен начальному тексту, показать весь список
                 FillProductListView();
             }
             else
             {
-                // В противном случае выполнить поиск
                 List<Product> searchResults = dataManager.SearchProductsByName(searchText);
 
-                // Очистить и заполнить ListView с результатами поиска
                 listView1.Items.Clear();
                 foreach (var product in searchResults)
                 {

@@ -48,14 +48,12 @@ namespace Medication
                     return false;
                 }
 
-                // Если файл пустой, устанавливаем новый продукт с ID = 1
                 if (existingProducts.Count == 0)
                 {
                     newProduct.ID = 1;
                 }
                 else
                 {
-                    // Получение максимального ID из существующих продуктов
                     int maxId = existingProducts.Max(p => p.ID);
                     newProduct.ID = maxId + 1;
                 }

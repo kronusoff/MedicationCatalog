@@ -53,7 +53,7 @@ namespace Medication
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // Suppress the Enter key
+                e.SuppressKeyPress = true; 
                 SelectNextControl((Control)sender, true, true, true, true);
             }
         }
